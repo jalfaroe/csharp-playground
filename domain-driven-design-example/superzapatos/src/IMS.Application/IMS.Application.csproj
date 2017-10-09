@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B298A28C-3237-43BA-8F25-3D7ABF35E429}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IMS.Application</RootNamespace>
+    <AssemblyName>IMS.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Articles\Dtos\DeleteArticleInput.cs" />
+    <Compile Include="Articles\Dtos\GetArticlesOutput.cs" />
+    <Compile Include="Articles\Dtos\ArticleDto.cs" />
+    <Compile Include="Articles\Dtos\GetArticleInput.cs" />
+    <Compile Include="Articles\IArticleAppService.cs" />
+    <Compile Include="Articles\Mappers\ArticleMapper.cs" />
+    <Compile Include="Articles\ArticleAppService.cs" />
+    <Compile Include="Articles\Mappers\GetArticlesOutputMapper.cs" />
+    <Compile Include="Articles\Mappers\ArticleDtoMapper.cs" />
+    <Compile Include="IoCConfigurator.cs" />
+    <Compile Include="Stores\Dtos\DeleteStoreInput.cs" />
+    <Compile Include="Stores\Dtos\GetStoresInput.cs" />
+    <Compile Include="Stores\IStoreAppService.cs" />
+    <Compile Include="Stores\Dtos\GetStoresOutput.cs" />
+    <Compile Include="Stores\Dtos\StoreDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stores\Mappers\GetStoresOutputMapper.cs" />
+    <Compile Include="Stores\Mappers\StoreDtoMapper.cs" />
+    <Compile Include="Stores\Mappers\StoreMapper.cs" />
+    <Compile Include="Stores\StoreAppService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IMS.Domain\IMS.Domain.csproj">
+      <Project>{09618079-cbf8-4469-bf16-84e116d87de7}</Project>
+      <Name>IMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IMS.Infrastructure.Data\IMS.Infrastructure.Data.csproj">
+      <Project>{b55aa68f-28f0-4578-9bcd-f7a241bbba52}</Project>
+      <Name>IMS.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IMS.Infrastructure.IoC.Contracts\IMS.Infrastructure.IoC.Contracts.csproj">
+      <Project>{1805bf77-e6f0-4ab1-8972-83436bd4f75b}</Project>
+      <Name>IMS.Infrastructure.IoC.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

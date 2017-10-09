@@ -1,0 +1,21 @@
+Deployment steps:
+1) Create the data base:
+- You can use the IMS.Database to publish the database in your own server.
+- You can use the script provided in ..src\IMS.DatabaseBase\Script 
+
+2) Change the application connection string to use your server
+- By now this is in a .cs file: ..src\IMS.Infrastructure.Crosscutting.Core\ConnectionStringProvider.cs
+
+3) Set Multiple Startup Projects in the solution, the projects are:
+- IMS.Web
+- IMS.API
+
+To set multiple startup projects:
+- In the Solution Explorer, select the solution (the very top node). Right-click the node to get the context menu.
+- Select Properties. The Solution Property Pages dialog box opens.
+- Expand the Common Properties node, and click Startup Project.
+- Click Multiple Startup Projects and set the appropriatet actions. For more information, see NIB How to: Modify Project Properties and Configuration Settings.
+
+4) Run
+
+
