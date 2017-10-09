@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Exercise.UnitTesting/.vs
+/Exercise.UnitTesting/Everest.Exercise.Services.TeamTests/obj/Debug
+/Exercise.UnitTesting/Everest.Exercise.Services.TeamTests/bin/Debug
+/Exercise.UnitTesting/Everest.Exercise.Services.Team/obj/Debug
+/Exercise.UnitTesting/Everest.Exercise.Services.Team/bin/Debug
+/Exercise.UnitTesting/Everest.Exercise.Services.PersonTests/obj/Debug
+/Exercise.UnitTesting/Everest.Exercise.Services.PersonTests/bin/Debug
+/Exercise.UnitTesting/Everest.Exercise.Services.Person/obj/Debug
+/Exercise.UnitTesting/Everest.Exercise.Services.Person/bin/Debug
+/Exercise.UnitTesting/Everest.Exercise.Runner/obj/x86/Debug
+/Exercise.UnitTesting/Everest.Exercise.Runner/bin/Debug
+/Exercise.UnitTesting/Everest.Exercise.Contracts.Team/obj/Debug
+/Exercise.UnitTesting/.axoCover
+/Exercise.UnitTesting/Everest.Exercise.Contracts.Person/bin/Debug
+/Exercise.UnitTesting/Everest.Exercise.Contracts.Person/obj/x86/Debug
+/Exercise.UnitTesting/Everest.Exercise.Contracts.Team/bin/Debug
+/Exercise.UnitTesting/packages
+/Exercise.UnitTesting/TestResults

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23AACF0B-26A2-4915-BE36-1C37C1CD5188}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Everest.Exercise.Runner</RootNamespace>
+    <AssemblyName>Everest.Exercise.Runner</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Everest.Exercise.Contracts.Person\Everest.Exercise.Contracts.Person.csproj">
+      <Project>{8E02B9B1-6255-4617-9638-B48A41962024}</Project>
+      <Name>Everest.Exercise.Contracts.Person</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Everest.Exercise.Contracts.Team\Everest.Exercise.Contracts.Team.csproj">
+      <Project>{C1CE892B-730A-4C2E-8CFA-4DD100ECD09D}</Project>
+      <Name>Everest.Exercise.Contracts.Team</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Everest.Exercise.Services.Person\Everest.Exercise.Services.Person.csproj">
+      <Project>{567BE287-27B1-4159-B08C-B87C34A5376E}</Project>
+      <Name>Everest.Exercise.Services.Person</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Everest.Exercise.Services.Team\Everest.Exercise.Services.Team.csproj">
+      <Project>{75FCE3F6-0CA3-4E0A-A328-457816FF568B}</Project>
+      <Name>Everest.Exercise.Services.Team</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ServiceModel.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
