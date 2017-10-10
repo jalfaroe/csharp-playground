@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  reservations.api:
+    image: reservations.api
+    build:
+      context: ./src/Services/Reservations/Reservations.API
+      dockerfile: Dockerfile
