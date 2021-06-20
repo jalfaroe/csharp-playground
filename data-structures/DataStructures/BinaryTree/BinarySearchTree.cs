@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace DataStructures.BinaryTree
+﻿namespace DataStructures.BinaryTree
 {
     /// <summary>
     ///     Binary Search Tree:
@@ -50,7 +48,6 @@ namespace DataStructures.BinaryTree
             if (root == null) return;
 
             InOrder(root.Left);
-            Debug.Write(root.Data + ", ");
             InOrder(root.Right);
         }
 
@@ -59,7 +56,6 @@ namespace DataStructures.BinaryTree
         {
             if (root == null) return;
 
-            Debug.Write(root.Data + ", ");
             PreOrder(root.Left);
             PreOrder(root.Right);
         }
@@ -71,7 +67,6 @@ namespace DataStructures.BinaryTree
 
             PostOrder(root.Left);
             PostOrder(root.Right);
-            Debug.Write(root.Data + ", ");
         }
 
         /// <summary>
