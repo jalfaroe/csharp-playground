@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace katas
 {
@@ -12,5 +13,14 @@ namespace katas
         ///     IsPalindrome("today") == false
         /// </summary>
         public bool IsPalindrome(object o) => o.ToString().SequenceEqual(o.ToString().Reverse());
+
+        public bool IsPalindrome(string s)
+        {
+            s = s.ToLower();
+            var rgx = new Regex("[^a-z0-9]");
+            s = rgx.Replace(s, string.Empty);
+
+            return s.SequenceEqual(s.Reverse());
+        }
     }
 }
