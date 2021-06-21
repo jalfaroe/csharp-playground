@@ -16,7 +16,7 @@ namespace katas.test
         }
 
         [TestMethod]
-        public void IsPalindrome()
+        public void GroupAnagrams()
         {
             // Arrange
             var input = new[] {"eat", "tea", "tan", "ate", "nat", "bat"};
