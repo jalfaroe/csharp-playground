@@ -1,4 +1,6 @@
-﻿using DataStructures.LinkedList;
+﻿using System.Linq;
+using DataStructures.LinkedList;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataStructuresTest.LinkedList
@@ -75,6 +77,16 @@ namespace DataStructuresTest.LinkedList
 
             Assert.IsFalse(ints.Contains(0));
             Assert.IsFalse(ints.Contains(11));
+        }
+
+        [TestMethod]
+        public void FindValueTest()
+        {
+            var ints = Create(1, 10);
+
+            var value = ints.FirstOrDefault(p => p == 4);
+
+            value.Should().Be(4);
         }
 
         private static LinkedList<int> Create(int start, int end)
