@@ -70,7 +70,7 @@ namespace DataStructures.BinaryTree
 
         // Post-order traversal: : right subtree -> root node -> left subtree.
         // The left and right are visited before the node.
-        // Useful for delete every node on the tree.
+        // Useful for delete every node on the tree. 
         public void PostOrder(Node root)
         {
             if (root == null) return;
