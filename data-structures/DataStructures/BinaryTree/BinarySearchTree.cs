@@ -1,4 +1,6 @@
-﻿namespace DataStructures.BinaryTree
+﻿using System.Diagnostics;
+
+namespace DataStructures.BinaryTree
 {
     /// <summary>
     ///     Binary Search Tree:
@@ -42,31 +44,40 @@
             }
         }
 
-        // In-order traversal: left subtree -> root node -> right subtree 
+        // Pre-order traversal : root node -> left subtree -> right subtree.
+        // The node is visited before it's children.
+        // Useful to do a copy of the tree.
+        public void PreOrder(Node root)
+        {
+            if (root == null) return;
+
+            Debug.Write(root.Data + ", ");
+            PreOrder(root.Left);
+            PreOrder(root.Right);
+        }
+
+        // In-order traversal: left subtree -> root node -> right subtree.
+        // The left child is visited before the node, then the right child.
+        // Useful to visit the nodes in sorted order from least to greatest.
         public void InOrder(Node root)
         {
             if (root == null) return;
 
             InOrder(root.Left);
+            Debug.Write(root.Data + ", ");
             InOrder(root.Right);
         }
 
-        // Pre-order traversal : root node -> left subtree -> right subtree
-        public void PreOrder(Node root)
-        {
-            if (root == null) return;
-
-            PreOrder(root.Left);
-            PreOrder(root.Right);
-        }
-
-        // Post-order traversal: : right subtree -> root node -> left subtree
+        // Post-order traversal: : right subtree -> root node -> left subtree.
+        // The left and right are visited before the node.
+        // Useful for delete every node on the tree.
         public void PostOrder(Node root)
         {
             if (root == null) return;
 
             PostOrder(root.Left);
             PostOrder(root.Right);
+            Debug.Write(root.Data + ", ");
         }
 
         /// <summary>
